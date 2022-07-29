@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Ectazium Bot</title>
+  </head>
+  <body>
+    <section id="about-bot">
+      <nav>
+        <div class="bot__logo">Ectazium Bot</div>
+        <ul class="nav__link--list">
+          <li
+            class="nav__link--anchor link__hover-effect--purple"
+          >
+          À propos
+            <ul class="nav__link-item--drop">
+              <li class="nav__item--drop" onclick="toggleModal()">À propos du Bot</li>
+              <li class="nav__item--drop">
+                <a class="nav__item-drop--link" href="#commands">Commandes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="click">
+            <a
+              class="nav__link--anchor"
+              href="#"
+              onclick="toggleContrast()"
+              ><i class="fas fa-adjust"></i></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="flex flex-1">
+          <div class="about-bot__info row">
+            <div class="about-bot__info--container">
+              <h1 class="about-bot__info--title">
+                Hey! Je suis <span class="text--pink">Ectazium Bot</span>&nbsp;<span
+                  class="wave"
+                  >👋</span
+                >
+              </h1>
+              <p class="about-bot__info--para">
+                Je suis un <strong class="text--pink">Bot Discord</strong> et je suis ici pour améliorer votre expérience sur Discord.
+                <br />
+                Voici
+                <b class="about-bot__info--more" onclick="toggleModal()"
+                  >plus d'informations</b
+                >
+                sur le bot
+              </p>
+            </div>
+          </div>
+        </div>
+        <button id="btnScrollToTop">
+         <a class='button-scroll' href="#"><i class="fas fa-angle-double-up"></i></a></i>
+        </button>
+      </header>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title">Voici plus d'informations sur le bot.</h3>
+          <p class="modal__para">
+            Ce robot est conçu pour
+            <b class="text--pink">améliorer votre expérience de Discord</b>.Il a diverses intentions comme
+            <b class="text--pink">la modération, l'amusement, l'utilité</b> et plus.
+            <br />
+            Le robot a été réalisé par
+            <b class="text--pink">Théo EwzZer</b>
+          </p>
+        </div>
+        <div class="modal__half modal__languages">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__sub-title--languages">
+            <b class="text--pink">Technologie</b> utilisée pour ce projet.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--languages">
+            J'ai utilisé beaucoup de <b class="text--pink">technologies</b> pour
+            construire ce projet. Elles sont toutes listées ci-dessous
+          </h4>
+          <div class="modal__technologies">
+            <figure class="modal__tech">
+              <img
+                class="modal__tech--img"
+                src="assets/javascript.png"
+                alt="JavaScript"
+              />
+              <span class="tech__name">JavaScript</span>
+            </figure>
+            <figure class="modal__tech">
+              <img
+                class="modal__tech--img"
+                src="assets/mongodb.png"
+                alt="MongoDB"
+              />
+              <span class="tech__name">MongoDB</span>
+            </figure>
+            </figure>
+            <figure class="modal__tech">
+              <img class="modal__tech--img" src="assets/npm.png" alt="NPM" />
+              <span class="tech__name">NPM</span>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="commands">
+      <h2 class="title">Toutes les <strong class="text--pink">Commandes</strong></h2>
+      <h3 class="sub__title"><strong class="text--pink">Prefix</strong> = /</h3>
+      <div class="accordion">
+        <div>
+          <input
+            type="radio"
+            name="example_accordion"
+            id="Moderation"
+            class="accordion__input"
+          />
+          <label for="Moderation" class="accordion__label">Moderation</label>
+          <div class="accordion__content">
+            <p class="accordion__text">
+              <strong class="text--pink">lock</strong> - Verrouiller un channel.
+              <br />
+              <strong class="text--pink">unlock</strong> - Déverrouiller un channel.
+              <br />
+              <strong class="text--pink">automod</strong> - Système de modération basé sur l'IA.
+              <br />
+              <strong class="text--pink">clear</strong> - Supprimer un nombre spécifié de messages d'un canal ou d'un utilisateur.
+            </p>
+          </div>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="example_accordion"
+            id="Utility"
+            class="accordion__input"
+          />
+          <label for="Utility" class="accordion__label">Tickets</label>
+          <div class="accordion__content">
+            <p class="accordion__text">
+              <strong class="text--pink">ticketsetup</strong> - Créer le message de ticket.
+              <br />
+              <strong class="text--pink">ticket</strong> - Ajouter ou supprimer un membre du ticket.
+            </p>
+          </div>
+        </div>
+        <!-- Copy from here if you want to add more categories -->
+        <div>
+          <input
+            type="radio"
+            name="example_accordion"
+            id="Systems"
+            class="accordion__input"
+          />
+          <label for="Systems" class="accordion__label">Systèmes</label>
+          <div class="accordion__content">
+            <p class="accordion__text">
+              <strong class="text--pink">voice</strong> - Contrôler votre canal vocal privé.
+              <br />
+              <strong class="text--pink">suggest</strong> - Poster des suggestion avec un système de thread
+              <br />
+              <strong class="text--pink">suggestion</strong> - Accepter ou refuser une suggestion
+              <br />
+              <strong class="text--pink">bug</strong> - Report des bug avec un système de thread
+              <br />
+              <strong class="text--pink">music</strong> - Système de musique complet
+              <br />
+              <strong class="text--pink">giveaway</strong> - Système de giveaway complet
+              <br />
+              <strong class="text--pink">customembed</strong> - Générer des embed grâce à des boutons
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Till Here -->
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+           <div class="footer__socials">
+             <a class="footer__socials-link" href=""
+             ><i class="fab fa-discord"></i
+               ></a>
+           <a class="footer__socials-link" href=""><i class="fas fa-link"></i></a>
+         </div>
+         <div class="footer__list">
+           <a href="#" class="footer__link link__hover-effect--purple">Accueil</a>
+           <a href="#about" class="footer__link link__hover-effect--purple" onclick="toggleModal()">A propos</a>
+         </div>
+         <div class="footer__copyright">
+           Copyright &copy; Conçu par
+           <a
+           target="_blank"
+             href="https://discord.com/users/384009727253807105"
+             ><span class="text--pink"
+             >Théo EwzZer#6956</span></a
+           >
+         </div>
+       </div>
+     </div>
+    </footer>
+  </body>
+</html>
